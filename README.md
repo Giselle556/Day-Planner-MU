@@ -8,6 +8,7 @@ With this day planner you will be able to keep track of your items throughout th
 -Javascript
 
 # Image
+![image](https://user-images.githubusercontent.com/89003419/132068819-14ee584e-06e9-432d-9a66-c17842351852.png)
 
 
 
