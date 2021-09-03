@@ -20,11 +20,13 @@ setInterval(function () {
     const formattedTime = `${month}/${day}/${year} ${hour}:${minutes}:${seconds}`;
     $("#currentDay").text(formattedTime);
 }, 1000);
+// ASK TUCKER!!!!!!!!!!!!BEFORE YOU DIE
+function textInput (){
 let appointments = document.querySelector("textarea");
 let data = JSON.parse(localStorage.getItem("day-schedule")) || {};
 const date = new Date();
 // Add a click event listener to our saveBtns
-
+}
 // Find all elements with the class of "time-block"
 $(".time-block").each(function (Date) {
     // For each time block, execute the following code
