@@ -21,40 +21,42 @@ setInterval(function () {
     $("#currentDay").text(formattedTime);
 }, 1000);
 // ASK TUCKER!!!!!!!!!!!!BEFORE YOU DIE
-function textInput (){
+//something is wrong with data
+
 let appointments = document.querySelector("textarea");
 let data = JSON.parse(localStorage.getItem("day-schedule")) || {};
 const date = new Date();
 // Add a click event listener to our saveBtns
-}
+
 // Find all elements with the class of "time-block"
-$(".time-block").each(function (Date) {
+$(".time-block").each(function () {
     // For each time block, execute the following code
     // Retrieve the id from the time block
     const id = $(this).attr("id");
-    const hour = id.split("-").pop();
+    const hour = parseInt(id.split("-").pop());
     date.getHours();
     
     if (hour === date.getHours()) {
         //  document.querySelector(".row").style.backgroundColor = "cream";
-        $("textarea").addClass("bg-secondary text-white");
+         $(this).find("textarea").addClass("bg-secondary text-white");
         
     } else if (hour > date.getHours()){
         //  document.querySelector(".row").style.backgroundColor = "red";
-        $("textarea").addClass("bg-warning text-white");
+        $(this).find("textarea").addClass("bg-warning text-white");
         
     } else {
         // document.querySelector(".row").style.backgroundColor = "green"
-        $("textarea").addClass("bg-success text-white");
+        $(this).find("textarea").addClass("bg-success text-white");
         
     }
     
     if (data[id]) {
-        console.log(data[id]);
+        $(this).find("textarea").val(data[id]);
     }
 });
 
 $(".saveBtn").on("click", function(event) {
+    
     // prevent the default action of our button
     event.preventDefault();
     //retrieve the value in our textarea
